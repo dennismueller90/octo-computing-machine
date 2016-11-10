@@ -2,12 +2,15 @@ build: false
 clone_depth: 1
 clone_folder: c:\projects\octo
 
+platform:
+  - x86
+  - x64
+
 install:
-    - cinst -y php
-    - cinst -y composer
-    - cd c:\projects\octo
-    - composer install
+  - cinst -y php composer
+  - cd c:\projects\octo
+  - composer install
 
 test_script:
-    - cd c:\projects\octo
-    - vendor/bin/phpunit.bat
+  - cd c:\projects\octo
+  - vendor\bin\phpunit.bat
